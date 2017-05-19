@@ -2,12 +2,13 @@
     'use strict';
 
     angular.module('app')
-        .controller('AppCtrl', []);
+        .controller('AppCtrl', ['$scope', 'routeService', AppCtrl]);
     
-    function AppCtrl() {
+    function AppCtrl($scope, routeService) {
 
         var vm = this;
+        vm.routeService = routeService;
 
     }
     
-});
+})();
