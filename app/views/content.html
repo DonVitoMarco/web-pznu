@@ -1,9 +1,9 @@
-<div id="pagewrap">
+<div id="pagewrap" class="container-fluid">
+
     <header ng-include="'/views/header.html'"></header>
 
-    <div id="content">
-        <section ng-include="app.routeService.landingContents()"></section>
-    </div>
+    <section ng-include="app.routeService.landingContents()"></section>
 
     <footer ng-include="'/views/footer.html'"></footer>
+
 </div>

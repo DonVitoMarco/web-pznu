@@ -29,7 +29,7 @@
 
         function isLandingPage() {
             var view = currentView();
-            return ['home', 'pages.what-is', 'pages.pricing', 'pages.contact'].indexOf(view) >= 0;
+            return ['home', 'pages.what-is', 'pages.pricing', 'pages.contact', 'pages.sign-in'].indexOf(view) >= 0;
         }
 
         function landingContents() {
@@ -37,7 +37,6 @@
             if(!isLandingPage()) {
 
             }
-            // return 'views/pages/home.html';
             return 'views/' + view.replace('.', '/') + '.html';
         }
 

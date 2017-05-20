@@ -38,12 +38,12 @@
                     })
                     .state('pages.contact', {
                         url: '/contact',
-                        templateUrl: 'views/contact.html'
+                        templateUrl: 'views/content.html'
                     })
-
-
-
-
+                    .state('pages.sign-in', {
+                        url: '/sign-in',
+                        templateUrl: 'views/content.html'
+                    })
 
             }]
         );

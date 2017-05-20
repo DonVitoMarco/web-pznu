@@ -1,7 +1,55 @@
-.testing {
-  width: percentage(5/7);
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #F7F7F7;
+  color: #626262;
 }
 
-body {
-  color: red;
+#header {
+  background-color: white;
+  h1 {
+    margin-bottom: 0.7em;
+  }
+  ul {
+    text-align: right;
+    list-style: none;
+    li {
+      margin: 1.8em 4.5em 0 0;
+      font-weight: 600;
+      font-size: 1em;
+      display: inline-block;
+      a {
+        color: #626262;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #4ECDCE;
+      }
+    }
+  }
+}
+
+#content-home {
+  text-align: center;
+  h2 {
+    margin-top: 2em;
+    font-weight: 800;
+  }
+}
+
+#home-sing-button {
+  .btn {
+    background-color: #2b669a;
+    color: white;
+    padding: 0.8em 5em;
+  }
+  .btn:hover {
+    background-color: #1a3956;
+  }
+}
+
+footer {
+  text-align: right;
+  margin: 2em 4em 0 0;
 }
