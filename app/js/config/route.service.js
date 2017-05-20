@@ -13,6 +13,7 @@
         this.currentView = currentView;
         this.goToState = goToState;
         this.landingContents = landingContents;
+        this.userContents = userContents;
 
         function currentView() {
             var view = $state.current.name;
@@ -23,7 +24,6 @@
         }
 
         function goToState(state) {
-            console.log("go to state : ", state);
             $state.go(state);
         }
 
@@ -35,6 +35,20 @@
         function landingContents() {
             var view = currentView();
             if(!isLandingPage()) {
+
+            }
+            return 'views/' + view.replace('.', '/') + '.html';
+        }
+
+        function isUserPage() {
+            var view = currentView();
+            return ['panel.board', 'panel.main']
+        }
+
+        function userContents() {
+            var view = currentView();
+            console.log(view);
+            if(!isUserPage()) {
 
             }
             return 'views/' + view.replace('.', '/') + '.html';

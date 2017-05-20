@@ -43,6 +43,20 @@
                     .state('pages.sign-in', {
                         url: '/sign-in',
                         templateUrl: 'views/content.html'
+                    });
+
+                // pages for user access only
+                $stateProvider
+                    .state('panel', {
+                        abstract: true
+                    })
+                    .state('panel.panel', {
+                        url: '/panel',
+                        templateUrl: 'views/panel/panel.html'
+                    })
+                    .state('panel.board', {
+                        url: '/board',
+                        templateUrl: 'views/panel/main.html'
                     })
 
             }]

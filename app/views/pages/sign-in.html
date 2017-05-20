@@ -1,1 +1,18 @@
-<h2>Sign-in</h2>
+<div class="row" ng-controller="SignInCtrl as signin">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" id="login-form">
+        Sign In
+        <table>
+            <tr>
+                <td><input type="text" name="username" ng-model="signin.username" required/></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="password" ng-model="signin.password" required/></td>
+            </tr>
+            <tr>
+                <td><button class="btn" ng-click="signin.signIn()">Sign in</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-3"></div>
+</div>
