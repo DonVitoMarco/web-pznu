@@ -9,8 +9,6 @@
         var vm = this;
         vm.routeService = routeService;
 
-
-
     }
 
 })();

@@ -1,18 +1,10 @@
 <div class="row" ng-controller="SignInCtrl as signin">
-    <div class="col-md-3"></div>
-    <div class="col-md-6" id="login-form">
-        Sign In
-        <table>
-            <tr>
-                <td><input type="text" name="username" ng-model="signin.username" required/></td>
-            </tr>
-            <tr>
-                <td><input type="password" name="password" ng-model="signin.password" required/></td>
-            </tr>
-            <tr>
-                <td><button class="btn" ng-click="signin.signIn()">Sign in</button></td>
-            </tr>
-        </table>
+    <div class="col-md-4 col-sm-offset-4" id="login-form">
+        <h2 class="title" style="margin-top: 1em">Sign in</h2>
+        <input class="sing-in-input" type="text" name="username" placeholder="username" ng-model="signin.username"
+               required/>
+        <input class="sing-in-input" type="password" name="password" placeholder="password" ng-model="signin.password"
+               required/>
+        <button class="btn" ng-click="signin.signIn()" style="margin-top: 1em">Sign in</button>
     </div>
-    <div class="col-md-3"></div>
 </div>
