@@ -29,7 +29,7 @@
 
         function isLandingPage() {
             var view = currentView();
-            return ['home', 'pages.what-is', 'pages.pricing', 'pages.contact', 'pages.sign-in'].indexOf(view) >= 0;
+            return ['home', 'pages.what-is', 'pages.contact', 'pages.sign-in'].indexOf(view) >= 0;
         }
 
         function landingContents() {
@@ -47,7 +47,6 @@
 
         function userContents() {
             var view = currentView();
-            console.log(view);
             if(!isUserPage()) {
 
             }

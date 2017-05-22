@@ -6,8 +6,26 @@ html, body {
   color: #626262;
 }
 
+#main-logo {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+#logo-header {
+  height: 50px;
+  width: 50px;
+  margin: 1.5em 0 1.2em 0;
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
 #header {
   background-color: white;
+  box-shadow: #dbdbdb 0 5em 15em;
   h1 {
     margin-bottom: 0.7em;
   }
@@ -25,6 +43,10 @@ html, body {
       }
       a:hover {
         color: #4ECDCE;
+      }
+      i {
+        font-size: 1.6em;
+        padding-top: 0.4em;
       }
     }
   }
@@ -61,4 +83,82 @@ footer {
   table {
     margin: 0 auto;
   }
+}
+
+#sort {
+  text-align: right;
+}
+
+.project-min {
+  padding: 1em;
+  background-color: #ffffff;
+  margin-top: 2em;
+  min-height: 270px;
+  .project-img {
+    border-radius: 50%;
+    background-color: palevioletred;
+    display: inline-block;
+    height: 3em;
+    width: 3em;
+  }
+  .project-title {
+    font-weight: 800;
+    p {
+      color: #0f0f0f;
+      margin: 0 10px;
+      padding: 0;
+      letter-spacing: 5px;
+    }
+  }
+  .project-cat {
+    p {
+      color: #d0d0d0;
+      margin: 0 10px;
+      padding: 0;
+    }
+  }
+  .project-desc {
+    min-height: 80px;
+    p{
+      padding: 20px 0;
+      color: #868686;
+    }
+  }
+  button {
+    font-size: 0.8em;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.avatar {
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #00b3ee;
+  height: 3em;
+  width: 3em;
+}
+
+.light-grey {
+  color: #dbdbdb;
+}
+
+.grey {
+  color: #bfbfbf;
+}
+
+.board-title {
+  margin: 1em 1em;
+  font-size: 30px;
+  font-weight: 800;
 }

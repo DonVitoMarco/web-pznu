@@ -1,0 +1,37 @@
+[
+  {
+    "name": "MOBINGI",
+    "author": "marek",
+    "category": "TECH",
+    "date": "2017-05-20",
+    "shortdesc": "SaaS for Cloud application lifecycle management."
+  },
+  {
+    "name": "RAPIDAPI",
+    "author": "marek",
+    "category": "TECH",
+    "date": "2017-05-20",
+    "shortdesc": "RapidAPI makes app development faster by creating a code-free backend platform."
+  },
+  {
+    "name": "SLIDEBEAN",
+    "author": "marek",
+    "category": "DESG",
+    "date": "2017-05-19",
+    "shortdesc": "Presentations that design themselves."
+  },
+  {
+    "name": "VIRECT",
+    "author": "marek",
+    "category": "TECH",
+    "date": "2017-08-18",
+    "shortdesc": "Easiest way to find and hire best video creators."
+  },
+  {
+    "name": "INDEMAND",
+    "author": "marek",
+    "category": "TECH",
+    "date": "2017-08-16",
+    "shortdesc": "Indemand lets anyone create an ondemand business in minutes."
+  }
+]

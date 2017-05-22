@@ -1,1 +1,49 @@
-<h1>BOARD</h1>
+<div class="row" id="board">
+
+    <div class="col-sm-12">
+        <div class="col-sm-8">
+            <p class="board-title">Discover start-ups</p>
+        </div>
+        <div class="col-sm-4" id="sort">
+            SORT
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+
+        <div class="col-sm-4" ng-repeat="project in profileCtrl.projects">
+            <div class="project-min">
+                <div class="left"><img class="project-img" src="images/{{project.name}}.jpg"/></div>
+                <div class="project-title left">
+                    <p>{{project.name}}</p>
+                </div>
+
+                <br>
+
+                <div class="project-cat left">
+                    <p>{{project.category}}  |  {{project.date}}</p>
+                </div>
+                <div class="clear"></div>
+
+                <div class="project-desc">
+                    <p>{{project.shortdesc}}</p>
+                </div>
+
+                <div class="left">
+                    <div class="avatar"></div>
+                    <div class="avatar"></div>
+                </div>
+                <div class="right" style="margin: 6px 6px 0 0;"><i class="fa fa-share-alt fa-2x grey" aria-hidden="true"></i></div>
+                <div class="clear"></div>
+
+                <br>
+
+                <div class="left" style="margin-left: 10px;"><i class="fa fa-commenting-o fa-2x grey" aria-hidden="true"></i><span class="light-grey">+26</span></div>
+                <div class="right"><button class="btn">SHOW MORE</button></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

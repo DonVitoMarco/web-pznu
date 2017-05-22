@@ -32,10 +32,6 @@
                         url: '/what-is',
                         templateUrl: 'views/content.html'
                     })
-                    .state('pages.pricing', {
-                        url: '/pricing',
-                        templateUrl: 'views/content.html'
-                    })
                     .state('pages.contact', {
                         url: '/contact',
                         templateUrl: 'views/content.html'

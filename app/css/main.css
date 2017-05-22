@@ -5,8 +5,21 @@ html, body {
   background-color: #F7F7F7;
   color: #626262; }
 
+#main-logo img {
+  height: auto;
+  max-width: 100%; }
+
+#logo-header {
+  height: 50px;
+  width: 50px;
+  margin: 1.5em 0 1.2em 0; }
+  #logo-header img {
+    height: auto;
+    max-width: 100%; }
+
 #header {
-  background-color: white; }
+  background-color: white;
+  box-shadow: #dbdbdb 0 5em 15em; }
   #header h1 {
     margin-bottom: 0.7em; }
   #header ul {
@@ -22,6 +35,9 @@ html, body {
         text-decoration: none; }
       #header ul li a:hover {
         color: #4ECDCE; }
+      #header ul li i {
+        font-size: 1.6em;
+        padding-top: 0.4em; }
 
 #content-home {
   text-align: center; }
@@ -47,3 +63,63 @@ footer {
   text-align: center; }
   #login-form table {
     margin: 0 auto; }
+
+#sort {
+  text-align: right; }
+
+.project-min {
+  padding: 1em;
+  background-color: #ffffff;
+  margin-top: 2em;
+  min-height: 270px; }
+  .project-min .project-img {
+    border-radius: 50%;
+    background-color: palevioletred;
+    display: inline-block;
+    height: 3em;
+    width: 3em; }
+  .project-min .project-title {
+    font-weight: 800; }
+    .project-min .project-title p {
+      color: #0f0f0f;
+      margin: 0 10px;
+      padding: 0;
+      letter-spacing: 5px; }
+  .project-min .project-cat p {
+    color: #d0d0d0;
+    margin: 0 10px;
+    padding: 0; }
+  .project-min .project-desc {
+    min-height: 80px; }
+    .project-min .project-desc p {
+      padding: 20px 0;
+      color: #868686; }
+  .project-min button {
+    font-size: 0.8em; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear {
+  clear: both; }
+
+.avatar {
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #00b3ee;
+  height: 3em;
+  width: 3em; }
+
+.light-grey {
+  color: #dbdbdb; }
+
+.grey {
+  color: #bfbfbf; }
+
+.board-title {
+  margin: 1em 1em;
+  font-size: 30px;
+  font-weight: 800; }
