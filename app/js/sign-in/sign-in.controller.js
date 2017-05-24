@@ -2,9 +2,9 @@
     'use strict';
 
     angular.module('app')
-        .controller('SignInCtrl', ['$scope', 'signInService', 'routeService', SignInCtrl]);
+        .controller('SignInCtrl', ['$scope', 'signInService', 'routeService', 'sessionService', SignInCtrl]);
 
-    function SignInCtrl($scope, signInService, routeService) {
+    function SignInCtrl($scope, signInService, routeService, sessionService) {
 
         var vm = this;
         vm.username = '';
@@ -13,6 +13,7 @@
         vm.signIn = function () {
             var isLogged = signInService.signIn(vm.username, vm.password);
             if (isLogged) {
+                sessionService.setParam('username', vm.username);
                 routeService.goToState('panel.board');
             }
         }

@@ -8,22 +8,12 @@
 
     function sessionService($state) {
 
-        var vm = this;
-
-        var logged = false;
-        var user = null;
-
-        this.setUser = function (userToSave) {
-            user = userToSave;
-            logged = true;
+        this.getParam = function (paramName) {
+            return localStorage.getItem(paramName);
         };
 
-        this.getUser = function () {
-            return user;
-        };
-
-        this.isLogged = function () {
-            return logged;
+        this.setParam = function (paramName, value) {
+            localStorage.setItem(paramName, value);
         };
 
     }

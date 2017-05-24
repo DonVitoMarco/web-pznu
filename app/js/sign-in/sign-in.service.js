@@ -11,10 +11,10 @@
         this.signIn = function singIn(username, password) {
             for(var i = 0; i < mockUsers.length; i++) {
                 if(mockUsers[i].username === username && mockUsers[i].password === password) {
-                    sessionService.setUser(mockUsers[i]);
+                    return true;
                 }
             }
-            return sessionService.isLogged();
+            return false;
         };
 
         var mockUsers = [

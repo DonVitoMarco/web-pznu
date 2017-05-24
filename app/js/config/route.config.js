@@ -54,6 +54,10 @@
                         url: '/board',
                         templateUrl: 'views/panel/main.html'
                     })
+                    .state('panel.details', {
+                        url: '/details',
+                        templateUrl: 'views/panel/main.html'
+                    })
 
             }]
         );

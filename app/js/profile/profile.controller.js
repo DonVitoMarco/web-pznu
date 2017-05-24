@@ -2,19 +2,20 @@
     'use strict';
 
     angular.module('app')
-        .controller('ProfileController', ['$scope', 'profileService', 'sessionService', ProfileCtrl]);
+        .controller('ProfileController', ['$scope', '$q', 'profileService', 'sessionService', 'routeService', ProfileCtrl]);
 
-    function ProfileCtrl($scope, profileService, sessionService) {
+    function ProfileCtrl($scope, $q, profileService, sessionService, routeService) {
 
         var vm = this;
         vm.username = '';
         vm.projects = [];
+        vm.project = {};
+        vm.showMore = showMore;
 
         init();
 
         function init() {
-            // vm.username = sessionService.getUser().username;
-            vm.username = 'marek';
+            vm.username = sessionService.getParam('username');
             console.log(vm.username);
 
             getAllProjects();
@@ -31,6 +32,10 @@
                 })
         }
 
+        function showMore(name) {
+            sessionService.setParam('project', name);
+            routeService.goToState('panel.details');
+        }
 
     }
 

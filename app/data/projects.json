@@ -4,7 +4,17 @@
     "author": "marek",
     "category": "TECH",
     "date": "2017-05-20",
-    "shortdesc": "SaaS for Cloud application lifecycle management."
+    "shortdesc": "SaaS for Cloud application lifecycle management.",
+    "comments": [
+      {
+        "user": "marek",
+        "content": "comment1"
+      },
+      {
+        "user": "marek",
+        "content": "comment2"
+      }
+    ]
   },
   {
     "name": "RAPIDAPI",
