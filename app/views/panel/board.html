@@ -1,17 +1,20 @@
 <div class="row" id="board">
 
     <div class="col-sm-12">
-        <div class="col-sm-8">
+        <div class="col-sm-4">
             <p class="board-title">Discover start-ups</p>
         </div>
-        <div class="col-sm-4" id="sort">
-            SORT
+        <div class="col-sm-8" id="sort">
+            <span> <input class="main-search" type="text" ng-model="profileCtrl.search" placeholder="&#xf002"/> </span>
+            <span class="cat" ng-click="profileCtrl.filterProjects('ALL')">ALL</span>
+            <span class="cat" ng-click="profileCtrl.filterProjects('TECH')">TECH</span>
+            <span class="cat" ng-click="profileCtrl.filterProjects('DESG')">DESG</span>
         </div>
     </div>
 
     <div class="col-sm-12">
 
-        <div class="col-sm-4" ng-repeat="project in profileCtrl.projects">
+        <div class="col-sm-4" ng-repeat="project in profileCtrl.projects | filter: profileCtrl.search">
             <div class="project-min">
                 <div class="left"><img class="project-img" src="images/{{project.name}}.jpg"/></div>
                 <div class="project-title left">
@@ -30,16 +33,35 @@
                 </div>
 
                 <div class="left">
-                    <div class="avatar"></div>
-                    <div class="avatar"></div>
+                    <div class="left" ng-if="project.comments.length > 0" style="margin-right: 5px;">
+                        <img class="project-img" src="images/{{project.comments[0].user}}.png"
+                             uib-tooltip="{{project.comments[0].user}}" tooltip-placement="top"/>
+                    </div>
+                    <div class="left" ng-if="project.comments.length > 1">
+                        <img class="project-img" src="images/{{project.comments[1].user}}.png"
+                             uib-tooltip="{{project.comments[1].user}}" tooltip-placement="top"/>
+                    </div>
+                    <div class="left" ng-if="project.comments.length > 2">
+                        <img class="project-img" src="images/{{project.comments[2].user}}.png"
+                             uib-tooltip="{{project.comments[2].user}}" tooltip-placement="top"/>
+                    </div>
                 </div>
-                <div class="right" style="margin: 6px 6px 0 0;"><i class="fa fa-share-alt fa-2x grey" aria-hidden="true"></i></div>
+                <div class="right" style="margin: 6px 6px 0 0;">
+                    <i class="fa fa-share-alt fa-2x grey share" aria-hidden="true"
+                       uib-popover-html="shareHtml"></i>
+                </div>
                 <div class="clear"></div>
 
                 <br>
 
-                <div class="left" style="margin-left: 10px;"><i class="fa fa-commenting-o fa-2x grey" aria-hidden="true"></i><span class="light-grey">+26</span></div>
-                <div class="right"><button class="btn" ng-click="profileCtrl.showMore(project.name)">SHOW MORE</button></div>
+                <div class="left" style="margin-left: 10px;">
+                    <i class="fa fa-commenting-o fa-2x grey" aria-hidden="true"></i>
+                    <span ng-if="project.comments.length > 0" class="light-grey"> + {{project.comments.length}}</span>
+                    <span ng-if="project.comments.length == null" class="light-grey"> + 0</span>
+                </div>
+                <div class="right">
+                    <button class="btn main-btn" ng-click="profileCtrl.showMore(project.name)">SHOW MORE</button>
+                </div>
                 <div class="clear"></div>
             </div>
         </div>

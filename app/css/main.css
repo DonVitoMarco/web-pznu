@@ -75,7 +75,28 @@ footer {
   text-align: center; }
 
 #sort {
+  margin-top: 3.5em;
   text-align: right; }
+  #sort .cat {
+    border-radius: 15px;
+    padding: 5px 25px;
+    background-color: #00a1f1;
+    color: #ffffff;
+    margin-right: 2.5em; }
+  #sort input {
+    padding: 4px 10px;
+    border-radius: 15px;
+    margin-right: 2em;
+    border: 1px solid #dbdbdb;
+    color: #868686;
+    font-family: FontAwesome, sans-serif; }
+  #sort input:hover {
+    outline: 0; }
+  #sort input:focus {
+    outline: 0; }
+  #sort .cat:hover {
+    cursor: pointer;
+    background-color: #2b669a; }
 
 .project-min {
   padding: 1em;
@@ -168,3 +189,10 @@ footer {
   margin: 0.3em;
   border-radius: 4px;
   border: 1px solid #eeeeee; }
+
+.share:hover {
+  cursor: pointer;
+  color: #00a1f1; }
+
+.notification-info {
+  padding: 10px; }

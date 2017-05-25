@@ -7,11 +7,15 @@
 
     <div class="col-sm-8">
         <ul>
-            <li><a ui-sref=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
             <li><a ui-sref=""><i class="fa fa-plus" aria-hidden="true"></i></a></li>
             <li><a ui-sref=""><i class="fa fa-bar-chart" aria-hidden="true"></i></a></li>
             <li><a ui-sref=""><i class="fa fa-cog" aria-hidden="true"></i></a></li>
-            <li><i class="fa fa-bell-o" aria-hidden="true"></i></li>
+            <li>
+                <i uib-popover-html="notificationsHtml"
+                   popover-placement="bottom-right"
+                   popover-title="New notifications"
+                   class="fa fa-bell-o share" aria-hidden="true"></i>
+            </li>
         </ul>
     </div>
 
