@@ -74,6 +74,13 @@ footer {
   box-shadow: #dbdbdb 0 0 2px 2px;
   text-align: center; }
 
+#add-form {
+  background-color: #ffffff;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 0;
+  text-align: center; }
+
 #sort {
   margin-top: 3.5em;
   text-align: right; }
@@ -180,8 +187,21 @@ footer {
       margin-bottom: 20px;
       border-radius: 0;
       border-bottom: 1px solid #a2a2a2; }
-    .contact-form div input:focus, .contact-form div textarea:focus {
+    .contact-form div select {
+      border: none;
+      border-bottom: 1px solid #a2a2a2;
+      box-shadow: none;
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      margin-bottom: 2em; }
+    .contact-form div *:focus {
       outline: none; }
+    .contact-form div *:hover {
+      outline: none; }
+
+.img-class {
+  height: auto;
+  max-width: 100%; }
 
 .sing-in-input {
   width: 100%;

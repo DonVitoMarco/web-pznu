@@ -1,0 +1,32 @@
+<div class="row" id="board">
+
+    <h2 class="title">Create new awesome idea</h2>
+
+    <div class="col-sm-5 col-sm-offset-1" id="add-form" ng-controller="AddController as addCtrl">
+
+        <form class="contact-form">
+            <div>
+                <input type="text" name="name" placeholder="awesome title" required>
+
+                <select class="form-control" ng-model="addCtrl.category" ng-options="c for c in addCtrl.categories"
+                        required>
+                    <option></option>
+                </select>
+                <textarea name="message" placeholder="short description..." required></textarea>
+                <textarea name="message" placeholder="...and long description" required></textarea>
+                <div style="text-align: right">
+                    <button class="btn main-btn">
+                        Create
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div class="col-sm-5">
+        <div style="text-align: center;">
+            <img class="img-class" src="images/add.png" style="padding: 4em;"/>
+        </div>
+    </div>
+
+</div>

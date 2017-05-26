@@ -58,6 +58,14 @@
                         url: '/details',
                         templateUrl: 'views/panel/main.html'
                     })
+                    .state('panel.add', {
+                        url: '/add',
+                        templateUrl: 'views/panel/main.html'
+                    })
+                    .state('panel.analytics', {
+                        url: '/analytics',
+                        templateUrl: 'views/panel/main.html'
+                    })
 
             }]
         );

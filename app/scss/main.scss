@@ -98,6 +98,14 @@ footer {
   text-align: center;
 }
 
+#add-form {
+  background-color: #ffffff;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 0;
+  text-align: center;
+}
+
 #sort {
   margin-top: 3.5em;
   text-align: right;
@@ -232,10 +240,26 @@ footer {
       border-radius: 0;
       border-bottom: 1px solid #a2a2a2;
     }
-    input:focus, textarea:focus {
+    select {
+      border: none;
+      border-bottom: 1px solid #a2a2a2;
+      box-shadow: none;
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      margin-bottom: 2em;
+    }
+    *:focus {
+      outline: none;
+    }
+    *:hover {
       outline: none;
     }
   }
+}
+
+.img-class {
+  height: auto;
+  max-width: 100%;
 }
 
 .sing-in-input {
@@ -254,3 +278,4 @@ footer {
 .notification-info {
  padding: 10px;
 }
+
