@@ -10,19 +10,19 @@
         </p>
 
         <div id="comments">
-            <div class="comment" ng-repeat="c in detailsCtrl.project.comments">
+            <div class="comment" ng-repeat="c in detailsCtrl.project.commentList">
 
                 <span class="date">{{c.date}} | </span> <span class="user">{{c.user}}</span>
-                <div class="content">{{c.content}}</div>
+                <div class="content">{{c.userComment}}</div>
             </div>
 
         </div>
 
         <div class="comment">
-            <form>
-                <textarea class="add-comment" name="desc" placeholder="write comment" required></textarea>
+            <form name="addCommentForm">
+                <textarea ng-model="detailsCtrl.newComment" class="add-comment" name="desc" placeholder="write comment" required></textarea>
                 <div style="text-align: right">
-                    <button class="btn main-btn">
+                    <button class="btn main-btn" ng-click="detailsCtrl.create()" ng-disabled="addCommentForm.$invalid">
                         Create
                     </button>
                 </div>

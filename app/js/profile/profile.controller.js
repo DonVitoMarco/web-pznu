@@ -14,6 +14,7 @@
         vm.search = '';
         vm.showMore = showMore;
         vm.filterProjects = filterProjects;
+        vm.logout = logout;
 
         init();
 
@@ -72,6 +73,11 @@
         function filterProjects(filter) {
             vm.filter = filter;
             getAllProjects();
+        }
+
+        function logout() {
+            sessionService.removeParam('username');
+            routeService.goToState('pages.home');
         }
 
     }

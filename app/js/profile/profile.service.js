@@ -39,13 +39,23 @@
         this.addProject = function (request) {
             return $http.post('http://localhost:8080/pznu-rest/startup/project', request)
                 .then(function (response) {
-                    console.log(response);
                     return {};
                 })
                 .catch(function (response) {
                     return $q.reject(response);
                 })
-        }
+        };
+
+        this.addComment = function (request) {
+            console.log(request);
+            return $http.post('http://localhost:8080/pznu-rest/startup/addComment', request)
+                .then(function (response) {
+                    return {};
+                })
+                .catch(function (response) {
+                    return $q.reject(response);
+                })
+        };
 
     }
 

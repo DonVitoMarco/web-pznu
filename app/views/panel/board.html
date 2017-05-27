@@ -33,17 +33,17 @@
                 </div>
 
                 <div class="left">
-                    <div class="left" ng-if="project.comments.length > 0" style="margin-right: 5px;">
-                        <img class="project-img" src="images/{{project.comments[0].user}}.png"
-                             uib-tooltip="{{project.comments[0].user}}" tooltip-placement="top"/>
+                    <div class="left" ng-if="project.commentList.length > 0" style="margin-right: 5px;">
+                        <img class="project-img" src="images/{{project.commentList[0].user}}.png"
+                             uib-tooltip="{{project.commentList[0].user}}" tooltip-placement="top"/>
                     </div>
-                    <div class="left" ng-if="project.comments.length > 1">
-                        <img class="project-img" src="images/{{project.comments[1].user}}.png"
-                             uib-tooltip="{{project.comments[1].user}}" tooltip-placement="top"/>
+                    <div class="left" ng-if="project.commentList.length > 1">
+                        <img class="project-img" src="images/{{project.commentList[1].user}}.png"
+                             uib-tooltip="{{project.commentList[1].user}}" tooltip-placement="top"/>
                     </div>
-                    <div class="left" ng-if="project.comments.length > 2">
-                        <img class="project-img" src="images/{{project.comments[2].user}}.png"
-                             uib-tooltip="{{project.comments[2].user}}" tooltip-placement="top"/>
+                    <div class="left" ng-if="project.commentList.length > 2">
+                        <img class="project-img" src="images/{{project.commentList[2].user}}.png"
+                             uib-tooltip="{{project.commentList[2].user}}" tooltip-placement="top"/>
                     </div>
                 </div>
                 <div class="right" style="margin: 6px 6px 0 0;">
@@ -56,8 +56,8 @@
 
                 <div class="left" style="margin-left: 10px;">
                     <i class="fa fa-commenting-o fa-2x grey" aria-hidden="true"></i>
-                    <span ng-if="project.comments.length > 0" class="light-grey"> + {{project.comments.length}}</span>
-                    <span ng-if="project.comments.length == null" class="light-grey"> + 0</span>
+                    <span ng-if="project.commentList.length > 0" class="light-grey"> + {{project.commentList.length}}</span>
+                    <span ng-if="project.commentList.length == 0" class="light-grey"> + 0</span>
                 </div>
                 <div class="right">
                     <button class="btn main-btn" ng-click="profileCtrl.showMore(project.name)">SHOW MORE</button>

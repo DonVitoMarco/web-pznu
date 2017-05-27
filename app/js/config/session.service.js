@@ -16,6 +16,10 @@
             localStorage.setItem(paramName, value);
         };
 
+        this.removeParam = function (paramName) {
+            localStorage.removeItem(paramName);
+        }
+
     }
 
 })();
