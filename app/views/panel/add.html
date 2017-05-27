@@ -1,21 +1,24 @@
-<div class="row" id="board">
+<div class="row" id="board" ng-controller="AddController as addCtrl">
 
     <h2 class="title">Create new awesome idea</h2>
 
-    <div class="col-sm-5 col-sm-offset-1" id="add-form" ng-controller="AddController as addCtrl">
+    <div class="success" ng-show="addCtrl.isVisibleSucces">{{addCtrl.message}}</div>
 
-        <form class="contact-form">
+    <div class="col-sm-5 col-sm-offset-1" id="add-form">
+
+        <form class="contact-form" name="addForm">
             <div>
-                <input type="text" name="name" placeholder="awesome title" required>
-
+                <input ng-model="addCtrl.title" type="text" name="name" placeholder="awesome title" required>
                 <select class="form-control" ng-model="addCtrl.category" ng-options="c for c in addCtrl.categories"
                         required>
                     <option></option>
                 </select>
-                <textarea name="message" placeholder="short description..." required></textarea>
-                <textarea name="message" placeholder="...and long description" required></textarea>
+                <textarea ng-model="addCtrl.shortdesc" name="desc" placeholder="short description..."
+                          required></textarea>
+                <textarea ng-model="addCtrl.longdesc" name="longdesc" placeholder="...and long description"
+                          required></textarea>
                 <div style="text-align: right">
-                    <button class="btn main-btn">
+                    <button class="btn main-btn" ng-click="addCtrl.create()" ng-disabled="addForm.$invalid">
                         Create
                     </button>
                 </div>
