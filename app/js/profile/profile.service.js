@@ -9,8 +9,9 @@
     function profileService($state, $q, $http) {
 
         this.getAllProjects = function () {
-            return $http.get('data/projects.json')
+            return $http.get('http://localhost:8080/pznu-rest/startup/projects')
                 .then(function (response) {
+                    console.log(response.data);
                     return response.data;
                 })
                 .catch(function (response) {
@@ -19,11 +20,12 @@
         };
         
         this.getProjectByName = function (name) {
-            return $http.get('data/projects.json')
+            return $http.get('http://localhost:8080/pznu-rest/startup/projects')
                 .then(function (response) {
                     var data = response.data;
                     for(var i = 0; i < data.length; i++) {
                         if (data[i].name === name) {
+                            console.log(data[i]);
                             return data[i];
                         }
                     }
