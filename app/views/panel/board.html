@@ -24,7 +24,7 @@
                 <br>
 
                 <div class="project-cat left">
-                    <p>{{project.category}}  |  {{project.date}}</p>
+                    <p>{{project.category}}  |  <span ng-bind="project.date | date: 'dd-MM-yyyy HH:mm:ss'"></span></p>
                 </div>
                 <div class="clear"></div>
 

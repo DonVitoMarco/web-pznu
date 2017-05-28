@@ -12,7 +12,7 @@
         <div id="comments">
             <div class="comment" ng-repeat="c in detailsCtrl.project.commentList">
 
-                <span class="date">{{c.date}} | </span> <span class="user">{{c.user}}</span>
+                <span class="date"><span ng-bind="c.date | date: 'dd-MM-yyyy HH:mm:ss'"></span> | <span class="user">{{c.user}}</span>
                 <div class="content">{{c.userComment}}</div>
             </div>
 
