@@ -66,6 +66,10 @@
                         url: '/analytics',
                         templateUrl: 'views/panel/main.html'
                     })
+                    .state('panel.settings', {
+                        url: '/settings',
+                        templateUrl: 'views/panel/main.html'
+                    })
 
             }]
         );

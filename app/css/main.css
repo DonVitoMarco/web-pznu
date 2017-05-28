@@ -267,3 +267,42 @@ footer {
   border: 1px solid #008a00;
   background-color: #62dc8a;
   text-align: center; }
+
+.error {
+  margin: 2em 5em;
+  padding: 1em 2em;
+  border-radius: 10px;
+  color: #8a0000;
+  border: 1px solid #8a0000;
+  background-color: #dc6167;
+  text-align: center; }
+
+#settings-box {
+  background-color: #ffffff;
+  border-radius: 10px; }
+  #settings-box h2 {
+    padding: 1em 0 0.5em 0; }
+  #settings-box .avatar-settings {
+    background-color: #1b6d85;
+    border-radius: 100%;
+    height: 10em;
+    width: 10em;
+    margin: 0 auto; }
+    #settings-box .avatar-settings img {
+      height: auto;
+      max-width: 100%; }
+  #settings-box h3 {
+    text-align: center; }
+
+.bold {
+  font-weight: 700; }
+
+.table-settings {
+  width: 100%; }
+  .table-settings th, .table-settings tr {
+    border-bottom: 1px solid #dbdbdb; }
+  .table-settings .right-align {
+    text-align: right;
+    padding: 1em 3em; }
+  .table-settings .left-align {
+    padding: 1em 3em; }

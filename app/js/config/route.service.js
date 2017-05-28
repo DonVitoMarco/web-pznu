@@ -42,7 +42,7 @@
 
         function isUserPage() {
             var view = currentView();
-            return ['panel.board', 'panel.main', 'panel.details', 'panel.add', 'panel.analytics']
+            return ['panel.board', 'panel.main', 'panel.details', 'panel.add', 'panel.analytics', 'panel.settings']
         }
 
         function userContents() {

@@ -10,7 +10,8 @@
             <li><a ui-sref="pages.home">Home</a></li>
             <li><a ui-sref="pages.what-is">What-Is</a></li>
             <li><a ui-sref="pages.contact">Contact</a></li>
-            <li><a ui-sref="pages.sign-in"><button class="btn main-btn">Sign in</button></a></li>
+            <li ng-if="!app.isLogged()"><a ui-sref="pages.sign-in"><button class="btn main-btn">Sign in</button></a></li>
+            <li ng-if="app.isLogged()"><a ui-sref="panel.board"><button class="btn main-btn">Go to app</button></a></li>
         </ul>
     </div>
 </div>

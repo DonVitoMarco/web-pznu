@@ -9,6 +9,10 @@
         var vm = this;
         vm.routeService = routeService;
 
+        vm.isLogged = function () {
+            return sessionService.getParam('username') !== null;
+        }
+
     }
 
 })();
